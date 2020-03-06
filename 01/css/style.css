@@ -1,0 +1,69 @@
+body {
+	font-family: "Montserrat", sans-serif;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #2A3137; 
+}
+.outer-circle {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  border-radius: 50%;
+  animation: rotate 1.5s linear infinite;
+}
+.inner-circle {
+  height: 180px;
+  width: 180px;
+  position: absolute;
+  background: black;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  z-index: 9;
+}
+@keyframes rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.outer-circle span {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  border-radius: 50%;
+}
+span:nth-child(1) {
+  filter: blur(5px);
+}
+
+span:nth-child(2) {
+  filter: blur(10px);
+}
+
+span:nth-child(3) {
+  filter: blur(25px);
+}
+
+span:nth-child(4) {
+  filter: blur(150px);
+}
+def newsUrl():
+    url = 'https://stock.cngold.org/rumen/'
+    #通过链接和编码获取页面内容
+    doc = pq(url,encoding="utf-8")
+    #通过css选择器获取所有的链接标签
+    lista = doc('.news_list li a')
+    print(lista)
+    for i,item in  enumerate(lista):
+        #通过yield关键词将newsUrl变成生成器，可进行循环迭代
+        yield doc(item).attr('href') 
+
+newsUrl()

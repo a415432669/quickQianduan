@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.text{
+				/* 文本水平居中 */
+				text-anchor: middle;
+				dominant-baseline: middle;
+			}
+			body{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<svg xmlns="http://www.w3.org/200/svg" 
+			height="700" width="700">
+			<!-- 设置底色的圆环 -->
+		    <circle cx="350" cy="350" r="300" 
+				fill="none" stroke="grey" 
+				stroke-width="40" stroke-linecap="round"/>
+			
+			<!-- 设置进度条 -->
+			<circle class="progess" 
+				transform="rotate(-90,350,350)" 
+				cx="350" cy="350" r="300" 
+				fill="none" stroke="red" 
+				stroke-width="40"
+				stroke-linecap="round"
+				stroke-dasharray="0,10000"  />
+			<!-- stroke-dasharray:一个表示长度，一个表示间距 -->
+			<!-- 设置文本 -->
+			<text class="text" x="350" y="350" 
+				font-size="200" fill="red">0</text>
+		</svg>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
+
