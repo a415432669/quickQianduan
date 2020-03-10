@@ -1,0 +1,101 @@
+* {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+html,body {
+	height: 100%;
+}
+.wk {
+	z-index: 999;
+	width: 200px;
+	height: 180px;
+	background: url(../img/wk.png) 0 0 no-repeat;
+	position: absolute;
+	top: 55%;
+	left: 20%;
+	animation: wkzou 1s steps(8) infinite;
+}
+@keyframes wkzou {
+	to {
+		background-position: -1600px 0;
+	}
+}
+
+.main {
+	height: 100%;
+	width: 100%;
+	-webkit-background-size: cover;
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+}
+.main ul {
+	height: 100%;
+	width: 3920px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: dong 50s linear infinite;
+}
+@keyframes dong {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: 1920px;
+	}
+}
+.main ul li {
+	height: 100%;
+	width: 100%;
+	background: url(../img/2.jpg);
+	background-repeat: no-repeat;
+	float: left;
+	margin-left: -2000px;
+}
+.bj {
+	z-index: 999;
+	width: 200px;
+	height: 180px;
+	background: url(../img/bj.png) 0 0 no-repeat;
+	position: absolute;
+	top: 55%;
+	left: 35%;
+	animation: bjzou 1s steps(8) infinite;
+}
+@keyframes bjzou {
+	to {
+		background-position: -1600px 0;
+	}
+}
+.ts {
+	z-index: 999;
+	width: 170px;
+	height: 240px;
+	background: url(../img/ts.png) 0 0 no-repeat;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	animation: tszou 1s steps(8) infinite;
+}
+@keyframes tszou {
+	to {
+		background-position: -1360px 0;
+	}
+}
+.ss {
+	z-index: 999;
+	width: 210px;
+	height: 200px;
+	background: url(../img/ss.png) 0 0  no-repeat;
+	position: absolute;
+	top: 57%;
+	left: 62%;
+	animation: sszou 1s steps(8) infinite;
+}
+@keyframes sszou {
+	to {
+		background-position: -1680px 0;
+	}
+}
